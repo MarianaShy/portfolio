@@ -5,13 +5,14 @@
 
 
 :root{
-	--main-color: #717171;
-	--main-dark-color: #222222;
-	--hover-color: #e5a5a7;
+	--main-color: rgb(113, 113, 113);
+	--main-dark-color: rgb(34, 34, 34);
+	--hover-color: rgb(229, 165, 167);
 
-	--background-pink: #e5a5a7;
-	--background-gray: #E1E1E1;
-	--background-dark: #030303;
+	--background-pink: rgb(229, 165, 167);
+	--background-pink-hover: rgb(235, 187, 189);
+	--background-gray: rgb(225, 225, 225);
+	--background-dark: rgb(3, 3, 3);
 	
 	
 }
@@ -20,11 +21,17 @@
 	padding:0;
 	box-sizing: border-box;
 	font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+	text-decoration: none;
+
+}
+li{
+	list-style: none;
 }
 
 
 html{
 	scroll-behavior: smooth;
+	font-size: 16px;
 }
 
 
@@ -60,10 +67,11 @@ html{
 i{
 	font-size: 16px;
 }
-body{
-	background-color: var(--background-dark);
+
+
+.container{
+	width: 100%;
+	position: relative;
 }
-
-
 
 
