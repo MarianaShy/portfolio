@@ -1,23 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,100;1,400;1,600;1,700;1,900&family=Ropa+Sans:ital@1&display=swap');
+@import url(./header.css);
+@import url(./main.css);
+@import url(./footer.css);
 
+
+:root{
+	--main-color: #717171;
+	--main-dark-color: #222222;
+	--hover-color: #e5a5a7;
+
+	--background-pink: #e5a5a7;
+	--background-gray: #E1E1E1;
+	--background-dark: #030303;
+	
+	
+}
 *{
 	margin:0;
 	padding:0;
+	box-sizing: border-box;
+	font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
 }
 
 
 html{
-	font-family: 'Poppins', sans-serif;
+	scroll-behavior: smooth;
 }
 
 
+
+/* CSS */
+.btn {
+  background-color: white;
+  border: 1px solid var(--main-dark-color);
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: var(--main-dark-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  outline: none;
+  padding: 13px 23px;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+  width: auto;
+}
+
+
+.btn:hover {
+  background-color: var(--background-gray);
+  border-color: black;
+  transform: scale(.96);
+}
+
+i{
+	font-size: 16px;
+}
 body{
-	background-color: #030303;
+	background-color: var(--background-dark);
 }
 
 
 
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,100;1,400;1,600;1,700;1,900&family=Ropa+Sans:ital@1&display=swap');
-@import url(./header.css);
-@import url(./main.css);
-@import url(./footer.css)
