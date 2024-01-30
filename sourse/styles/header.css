@@ -59,7 +59,10 @@
 .logo-img{
 	width: 100%;
 }
-
+.nav-list li{
+	display: inline-block;
+	width: auto;
+}
 
 .nav-menu-burger i{
 	font-size: 3rem;
@@ -70,4 +73,46 @@
 }
 .hidden{
 	top: -500px;
+}
+
+@media (min-width: 723px) {
+	
+	.nav-menu-burger{
+		display: none;
+	}
+	.header{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.header-top{
+		z-index: 0;
+	}
+	.nav-menu{
+		position: fixed;
+		right: 0;
+		top: 0;
+		width: auto;
+		z-index: 10;
+		margin-top: 1rem;
+		margin-right: 1rem;
+		background-color: var(--background-gray);
+		color: var(--main-dark);
+		
+	}
+	.nav-list{
+		flex-direction: row;
+		background-color: var(--background-gray);
+
+	}
+	.nav-list a{
+		color:var(--main-dark);
+		background-color: var(--background-gray);
+		border-radius: 10px;
+
+	}
+	.nav-list a:hover{
+		background-color: white;
+		rotate: 2deg;
+	}
 }
