@@ -73,7 +73,11 @@ i{
 	position: relative;
 }
 
-
+@media (max-width: 500px) {
+	html{
+		font-size: 14px;
+	}
+}
 
 @media (min-width: 723px) {
 }
