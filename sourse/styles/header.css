@@ -108,7 +108,7 @@
 	.nav-list a{
 		color:var(--main-dark);
 		background-color: var(--background-gray);
-		border-radius: 10px;
+		border-radius: 0.2rem;
 
 	}
 	.nav-list a:hover{
