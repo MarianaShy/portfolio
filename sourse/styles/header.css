@@ -86,7 +86,7 @@
 		justify-content: space-between;
 	}
 	.header-top{
-		z-index: 0;
+		z-index: 5;
 	}
 	.nav-menu{
 		position: fixed;
