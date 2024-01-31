@@ -1,8 +1,9 @@
 .bio__flex{
 	display: flex;
 	justify-content: space-between;
-	flex-wrap: wrap;
-
+	flex-wrap: wrap-reverse;
+	color: var(--main-dark);
+	text-align: center;
 }
 .bio-col-1 .bio-col-2{
 	width: 100%;
@@ -10,7 +11,6 @@
 .content-container{
 	margin: 0 auto;
 
-	color: var(--main-dark);
 	}
 .text-style{
 	color: var(--main-color);
@@ -20,9 +20,9 @@
 .tab-titles{
 	display: flex;
 	padding: 1rem 0 2rem;
+	justify-content: space-evenly;
 }
 .tab-links{
-	margin-right: 2rem;
 	position: relative;
 }
 .tab-links::after{
@@ -43,7 +43,6 @@ width: 100%;
 	font-weight: 300;
 }
 .tab-content li{
-	list-style-type: disc;
 	padding: 0.5rem 0;
 }
 .tab-content span{
@@ -56,19 +55,24 @@ width: 100%;
 .tab-content.active-tab{
 	display: block;
 }
+.bio-col-1 img{
+	width: 100%;
+	border-radius: 2rem;
+}
 	@media (min-width: 723px) {
-
+		.bio__flex{
+			text-align: start;
+		}
+		.tab-titles{
+		
+			justify-content: start;
+			gap: 1rem;
+		}
 		.bio-col-1{
 			flex-basis: 35%;
 		}
-		.bio-col-1 img{
-			width: 100%;
-			border-radius: 15px;
-		}
-		.content-container{
-			padding: 2rem;			
-			color: var(--main-dark);
-			}
+		
+		
 		.bio-col-2{
 			flex-basis: 55%;
 		}
