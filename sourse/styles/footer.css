@@ -26,14 +26,13 @@ footer{
 	margin: 0;
 	min-width: 100%;
 	white-space: nowrap;
+	flex-wrap: nowrap;
 	animation-name: runningLine;
 	animation-duration: 5s;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
  }
- .running__line:hover {
-	animation-name: none;
- }
+
  @keyframes runningLine {
 	from {
 	  transform: translateX(0);
