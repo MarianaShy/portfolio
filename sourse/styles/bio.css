@@ -1,0 +1,9 @@
+.bio__flex{
+	display: flex;
+	justify-content: space-between;
+}
+.content-container{
+	margin: 2rem auto;
+	color: var(--main-dark);
+	background-color: blue;
+	}

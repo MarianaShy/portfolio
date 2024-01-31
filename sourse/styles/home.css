@@ -1,11 +1,12 @@
-
 .main{
 	margin-top: 5rem;
+
 }
 
 
 .content-container{
 margin: 0 auto;
+
 }
 
 .home__title{
@@ -47,14 +48,18 @@ margin: 0 auto;
 @media (min-width: 723px) {
 	.home__picture{
 		width: 50vw;
+		top: -6rem;
+		border-radius: 1rem;
 	}
 	.home__flex{
 		flex-direction: row;
 	}
-	.home__picture{
-		top: -6rem;
-	}
+	.home__titles{
+align-self: center;	}
+.content-container{
+	margin: 2rem auto;
 	
+	}
 }
 @media (min-width: 933px) {
 	.home__title{
