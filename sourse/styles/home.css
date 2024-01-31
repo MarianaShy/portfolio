@@ -1,12 +1,10 @@
 .main{
 	margin-top: 5rem;
-
 }
 
 
 .content-container{
 margin: 0 auto;
-
 }
 
 .home__title{
@@ -55,11 +53,9 @@ margin: 0 auto;
 		flex-direction: row;
 	}
 	.home__titles{
-align-self: center;	}
-.content-container{
-	margin: 2rem auto;
-	
+		margin-top: 6rem;
 	}
+	
 }
 @media (min-width: 933px) {
 	.home__title{
