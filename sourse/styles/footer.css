@@ -1,4 +1,5 @@
 .footer-flex{
+	display: flex;
 	padding: 2rem;
 	margin: 0 auto;
 	align-self: center;
@@ -6,6 +7,10 @@
 	color: var(--main-color);
 	width: 100%;
 	background-color: var(--background-gray);
+
+}
+footer{
+	overflow: hidden;
 
 }
 .footer-flex a{
@@ -16,3 +21,26 @@
 	color: var(--background-pink);
 	
 }
+.running__line {
+	flex-shrink: 0;
+	margin: 0;
+	min-width: 100%;
+	white-space: nowrap;
+	animation-name: runningLine;
+	animation-duration: 5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+ }
+ .running__line:hover {
+	animation-name: none;
+ }
+ @keyframes runningLine {
+	from {
+	  transform: translateX(0);
+	}
+	
+	to {
+	  transform: translateX(-100%);
+	}
+ }
+ 
