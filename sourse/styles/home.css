@@ -25,7 +25,7 @@ margin: 0 auto;
 }
 .home__picture{
 	width: 100%;
-	z-index: -1;
+	z-index: -2;
 	position: relative;
 	border-radius: 2rem;
 	
@@ -33,6 +33,7 @@ margin: 0 auto;
 .home__titles{
    position: relative;
 	top: 10rem;
+	z-index: -1;
 }
 
 @media (max-width: 520px) {
@@ -54,8 +55,11 @@ margin: 0 auto;
 	.main{
 		position: relative;
 	}
-	
+	#main-img{      
+		content:url("/sourse/img/422749736_352870154183603_141032903342476910_n2.jpg");
+	} 
 }
+
 @media (min-width: 933px) {
 	
 	

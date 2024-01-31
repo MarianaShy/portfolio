@@ -1,0 +1,16 @@
+#contacts{
+	background-color: var(--background-pink);
+}
+#contacts .social-media-link a{
+	display: block;
+	padding: 1rem;
+	color:white;
+	transition-duration: 0.7s;
+	background-color: var(--background-pink);
+	transition-timing-function: linear;
+	text-align: center;
+}
+#contacts .social-media-link a:hover{
+	background-color: var(--background-pink-hover);
+	border-radius: 2px;
+}
