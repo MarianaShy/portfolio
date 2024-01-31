@@ -73,7 +73,7 @@
 					</div>
 					
 					<div class="bio-col-2">
-						<img src="./sourse/img/422749736_352870154183603_141032903342476910_n.jpg" alt="women" class="home__picture">
+						<img src="./sourse/img/422749736_352870154183603_141032903342476910_n 2.jpg" alt="women" class="home__picture">
 					</div>
 
 				</div>
@@ -92,7 +92,7 @@
 				<div class="content-container">
 					<div class="bio__flex">
 						<div class="bio-col-1">
-							<img src="./sourse/img/416406583_1734957293683105_1921322878732978622_n.jpg" alt="picture woman with soap bubbles">
+							<img src="./sourse/img/419471915_358179057004224_7901192230062668620_n.jpg" alt="picture woman with soap bubbles">
 						</div>
 						<div class="bio-col-2">
 							<h2 class="subtitle">Personal information</h2>
@@ -100,11 +100,11 @@
 							</p>
 							<div class="bio__sections">
 								<div class="tab-titles">
-									<p class="btn tab-links active-link">Skills</p>
-									<p class="btn tab-links">Experience</p>
-									<p class="btn tab-links">Education</p>
+									<p class="btn tab-links active-link" onclick="openTab(`skills`)">Skills</p>
+									<p class="btn tab-links" onclick="openTab(`experience`)">Experience</p>
+									<p class="btn tab-links" onclick="openTab(`education`)">Education</p>
 								</div>
-								<div class="skills">
+								<div class="tab-content  active-tab" id="skills">
 									<ul>
 										<li>CSS/HTML</li>
 										<li>Java Script</li>
@@ -112,19 +112,18 @@
 										<li>API</li>
 									</ul>
 								</div>
-								<div class="experience">
+								<div class="tab-content " id="experience">
 									<ul>
-										<li>Warehause Worker<span>May 2022 - Nov 2022</span></li>
+										<li>Warehause Worker <span>May 2022 - Nov 2022</span></li>
 										<li>Self Employed Handmade artist <span>Sep 2017 - Jan 2022</span></li>
-										<li>Psychologist<span>Des 2013 - July 2017</span></li>
+										<li>Psychologist <span>Des 2013 - July 2017</span></li>
 									</ul>
 								</div>
-								<div class="education">
+								<div class=" tab-content " id="education">
 									<ul>
-										<li>Swedish language and society
-											<span>Nov 2022 - Dec 2023 Sweden</span></li>
-										<li>Web Development<span>Jan 2022 - May 2023 Sweden</span></li>
-										<li>Psychology<span>Aug 2008 - Jun 2013 Ukraine</span></li>
+										<li>Swedish language and society <span>Nov 2022 - Dec 2023 Sweden</span></li>
+										<li>Web Development <span>Jan 2022 - May 2023 Sweden</span></li>
+										<li>Psychology <span>Aug 2008 - Jun 2013 Ukraine</span></li>
 									</ul>
 								</div>
 							</div>

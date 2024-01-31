@@ -38,6 +38,24 @@
 .tab-links.active-link::after{
 width: 100%;
 }
+.tab-content{
+	color: var(--main-dark);
+	font-weight: 300;
+}
+.tab-content li{
+	list-style-type: disc;
+	padding: 0.5rem 0;
+}
+.tab-content span{
+	color: var(--background-pink);
+	font-weight: 300;
+}
+.tab-content{
+	display: none;
+}
+.tab-content.active-tab{
+	display: block;
+}
 	@media (min-width: 723px) {
 
 		.bio-col-1{
