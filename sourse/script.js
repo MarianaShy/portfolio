@@ -46,3 +46,16 @@ function openTab(tabname) {
 	event.currentTarget.classList.add("active-link")
 	document.getElementById(tabname).classList.add("active-tab")
 }
+
+
+//--------------------contacts-----------
+
+if (typeof(Storage) !== "undefined") {
+	// Code for localStorage/sessionStorage.
+ } else {
+	// Sorry! No Web Storage support..
+ }
+ localStorage.setItem("lastname", "Smith");
+
+ // Retrieve
+ document.getElementById("result").innerHTML = localStorage.getItem("lastname");

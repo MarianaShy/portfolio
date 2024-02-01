@@ -33,6 +33,7 @@ li{
 
 html{
 	scroll-behavior: smooth;
+	font-size: 14px;
 }
 
 
@@ -51,7 +52,7 @@ html{
   font-weight: 600;
   line-height: 1.5rem;
   outline: none;
-  padding: 0.7rem 1.5rem;
+  padding: 0.7rem 1rem;
   text-align: center;
   text-decoration: none;
   transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
@@ -66,7 +67,7 @@ html{
 }
 
 i{
-	font-size: 16px;
+	font-size: 1rem;
 }
 .content-container{
 	padding: 1rem;			
@@ -81,7 +82,14 @@ i{
 	flex-direction: column;
 }
 
-
+@media (min-width: 520px) {
+	html{
+		font-size: 16px;
+	}
+	.btn{
+		padding: 0.7rem 1.5rem;
+	}
+}
 
 
 @media (min-width: 723px) {
