@@ -1,5 +1,8 @@
-#admin{
+.admin{
 	display: none;
+}
+.admin-active{
+	display: flex;
 }
 .admin-flex{
 	display: flex;

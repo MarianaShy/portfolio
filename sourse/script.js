@@ -112,32 +112,35 @@ if(!note){hiMessage.innerHTML = "Hi, dear admin. You haven't received any new me
 function fetchPassword(callback) {
 	fetch('./generated.json').then((response) => {
 	  response.json().then((data) => {
-		 password = data[0].password;
-		 callback(password);
+		 let passwordData = data[0].password;
+		 callback(passwordData);
+		 
 	  });
-	});
+	})
+	
  }
  const logInButton = document.getElementById("log-in");
  const adminDashboard = document.getElementById("admin-dashboard");
  const passwordInput = document.getElementById("password-input");
 
-function authorizeAdmin(pass) {
 
-const adminPassword = pass;
-console.log(adminPassword)
 
-	if(passwordInput.value === adminPassword) { 
-		console.log(adminDashboard);
+
+function authorizeAdmin(password) {
+	
+	if(passwordInput.value === password) { 
+		adminDashboard.classList.add("admin-active");
 	}
-	else{alert("Password is not correct. Please try again.")}
+	else{
+		alert("Password is not correct. Please try again.");
+		
+	}
 }
 
 
-logInButton.addEventListener("click", fetchPassword(authorizeAdmin));
-
-
-//____________fetch json data
-
+logInButton.addEventListener("click", function () {
+	fetchPassword(authorizeAdmin);
+ });
 
 
 	
