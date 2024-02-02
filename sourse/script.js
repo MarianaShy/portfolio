@@ -97,25 +97,48 @@ getNotes.forEach((note) => {
 
 // delete the note
 const deleteNote = (btn, note) => {
-  let el = btn.parentNode;
-  const index = [...el.parentElement.children].indexOf(el);
-  notesStorage.splice(index, 1);
-  localStorage.setItem("notes", JSON.stringify(notesStorage));
-  el.remove();
-  if(!note){hiMessage.innerHTML = "Hi, dear admin. You haven't received any new messages." }
+let el = btn.parentNode;
+const index = [...el.parentElement.children].indexOf(el);
+notesStorage.splice(index, 1);
+localStorage.setItem("notes", JSON.stringify(notesStorage));
+el.remove();
+if(!note){hiMessage.innerHTML = "Hi, dear admin. You haven't received any new messages." }
 };
 
 
 //--------------------admin-----------
 
-function authorizeAdmin() {
-const adminDashboard = document.getElementById("admin-dashboard");
-const passwordInput = document.getElementById("password-input");
-const adminPassword = "21";
+
+function fetchPassword(callback) {
+	fetch('./generated.json').then((response) => {
+	  response.json().then((data) => {
+		 password = data[0].password;
+		 callback(password);
+	  });
+	});
+ }
+ const logInButton = document.getElementById("log-in");
+ const adminDashboard = document.getElementById("admin-dashboard");
+ const passwordInput = document.getElementById("password-input");
+
+function authorizeAdmin(pass) {
+
+const adminPassword = pass;
+console.log(adminPassword)
+
 	if(passwordInput.value === adminPassword) { 
 		console.log(adminDashboard);
 	}
 	else{alert("Password is not correct. Please try again.")}
 }
 
+
+logInButton.addEventListener("click", fetchPassword(authorizeAdmin));
+
+
+//____________fetch json data
+
+
+
+	
 
