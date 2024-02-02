@@ -127,6 +127,9 @@ function fetchPassword(callback) {
 
 function hideDashboard (){ 
 	adminDashboard.classList.add("admin-hidden");
+	logInForm.innerHTML = `<input id="password-input" type="password" value="" class="form-field"  placeholder="Enter Your password to log in as an admin">
+	<button class="btn" id="log-in">Log in</button>`;
+
 };
 
 
