@@ -33,6 +33,9 @@
 	display: flex;
 	flex-direction: column;
 }
+.btn-log-in, .log-in-field{
+	height: 3rem;
+}
 
 
 @media (min-width: 520px) {
@@ -43,11 +46,14 @@
 @media (min-width: 723px) {
 	.log-in-form{
 		flex-direction: row;
+		align-items: center;
 		justify-content: center;
 
 	}
 	.form-field{
-		flex-basis: 50%;
+		flex-basis: 35%;
+		margin-right: 2rem;
+		
 	}
 }
 @media (min-width: 933px) {
