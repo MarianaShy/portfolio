@@ -85,7 +85,7 @@
 				</div>
 			</article>----------->
 		<!-----------bio----------->
-
+		</section>
 			<article id="personal" >
 				<div class="content-container">
 					<div class="bio__flex">
@@ -136,9 +136,10 @@
 
 			<article id="contacts">
 				<div class="content-container">
-					<h2 class="subtitle">Contacts</h2>
 					<div class="contacts-flex">
 						<div class="left-column">
+							<h2 class="subtitle">Contacts</h2>
+
 							<p class="text-style-white"> marjanka77777@gmail.com</p>
 							<p class="text-style-white"> +460733-752822</p>
 							<ul class="social-media-list">
@@ -159,7 +160,7 @@
 							<form id="contact-form" class="form">
 								<input id="contact-name" class="form-field" type="text" placeholder="Your Name" required />
 								<input id="contact-email" class="form-field" type="text" placeholder="Your Email" required />
-								<textarea name="Message" id="form-message"  rows="6" placeholder="Your message" required></textarea>
+								<textarea name="Message" id="form-message"  rows="6" placeholder="Your message" required class="form-field"></textarea>
 								<button id="contact-submit" class="btn">Save</button>
 							</form>
 						</div>
@@ -177,14 +178,24 @@
 
 			<!------------admin------>
 
-			<article id="admin">
-				<div class="content-container">
-					<h2 class="subtitle">Admin dashboard</h2>
-					<p id="hi-message" class="text-style">Hi dear admin. You haven't received any new messages</p>
-					<ul id="information-output" class="admin-flex"></ul>
+			<article id="admin-pannel">
+				<div class="content-container"> 
+					<section>
+						<div class="log-in-form">
+							<input id="password-input" type="password" value="" class="form-field"  placeholder="Enter Your password to log in as an admin">
+							<button class="btn" onclick="authorizeAdmin()">Log in</button>
+						</div>
+						
+						
+					</section>
+					<section id="admin">
+						<h2 class="subtitle">Admin dashboard</h2>
+						<p id="hi-message" class="text-style">Hi dear admin. You haven't received any new messages</p>
+						<ul id="information-output" class="admin-flex"></ul>
+					
+					</section>
 				</div>
 			</article>
-		</section>
 		<!-----------footer----------->
 		<footer>
 			<div class="footer-flex ">

@@ -1,3 +1,6 @@
+#admin{
+	display: none;
+}
 .admin-flex{
 	display: flex;
 	flex-direction: column;
@@ -8,7 +11,37 @@
 	color: var(--main-dark-color);
 	
 }
+.admin-flex li{
+	display: block;
+	background-color: var(--background-pink);
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+	margin: 0.5rem auto;
+}
 .admin-flex a:hover{
 	color: var(--background-pink);
+	
+}
+.log-in-form{
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+@media (min-width: 520px) {
+
+}
+
+
+@media (min-width: 723px) {
+	.log-in-form{
+		flex-direction: row;
+	}
+}
+@media (min-width: 933px) {
+	
+}
+@media (min-width: 1127px) {
 	
 }

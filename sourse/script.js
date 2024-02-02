@@ -106,3 +106,15 @@ const deleteNote = (btn, note) => {
 };
 
 
+//--------------------admin-----------
+
+function authorizeAdmin() {
+const adminDashboard = document.getElementById("admin-dashboard");
+const passwordInput = document.getElementById("password-input");
+const adminPassword = 21;
+	if(passwordInput.value) { 
+		alert("hi");
+	}
+	else{alert("no")}
+}
+
