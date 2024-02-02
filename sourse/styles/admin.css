@@ -1,0 +1,14 @@
+.admin-flex{
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin: 1rem  auto;
+}
+.admin-flex a{
+	color: var(--main-dark-color);
+	
+}
+.admin-flex a:hover{
+	color: var(--background-pink);
+	
+}

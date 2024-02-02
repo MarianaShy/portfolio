@@ -1,5 +1,7 @@
 #contacts{
 	background-color: var(--background-pink);
+	text-align: center;
+	color:white
 }
 #contacts .social-media-link a{
 	display: block;
@@ -66,7 +68,10 @@
 		text-align: start;
 
 	}
-	
+	#contacts{
+		text-align: start;
+
+	}
 	.right-column{
 		flex-basis: 45%;
 		

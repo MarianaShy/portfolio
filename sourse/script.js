@@ -52,39 +52,57 @@ function openTab(tabname) {
 const noteForm = document.getElementById("contact-form");
 const noteName = document.getElementById("contact-name");
 const noteEmail = document.getElementById("contact-email");
+const noteMessage = document.getElementById("form-message");
+const hiMessage = document.getElementById("hi-message");
 
 const noteSubmit = document.getElementById("contact-submit");
 const notes = document.getElementById("information-output");
 
-let notesStorage = localStorage.getItem("notes")
-  ? JSON.parse(localStorage.getItem("notes"))
-  : [];
 
-  noteForm.addEventListener("submit", (e) => {
+
+
+let notesStorage = localStorage.getItem("notes")
+? JSON.parse(localStorage.getItem("notes"))
+: [];
+
+   noteForm.addEventListener("submit", (e) => {
 	e.preventDefault();
-	notesStorage.push({ name: noteName.value, email: noteEmail.value });
- 
+	notesStorage.push({ name: noteName.value, email: noteEmail.value, message: noteMessage.value });
+
 	localStorage.setItem("notes", JSON.stringify(notesStorage));
-	listBuilder(noteName.value, noteEmail.value);
+	listBuilder(noteName.value, noteEmail.value, noteMessage.value);
 	noteEmail.value = "";
 	noteName.value = "";
+	noteMessage.value = "";
  });
 
-const listBuilder = (name, email) => {
+
+ //Display the information from the reguest
+const listBuilder = (name, email, message) => {
   const note = document.createElement("li");
-  note.innerHTML = `<button onclick=deleteNote(this) class="btn" >Delete message</button> ${name} wrote from ${email} `;
+  note.innerHTML = `<button onclick=deleteNote(this) class="btn" >Delete message</button> ${name} wrote: "${message}". Use this email address to reach out: <a href="meilto:${email}" class="">${email}</a> `;
   notes.appendChild(note);
+  if(note){hiMessage.innerHTML = "Hi, dear admin. You have received some messages." }
+  return note;
 };
 
+
+//loop over all requests that have been sent
 const getNotes = JSON.parse(localStorage.getItem("notes")) || [];
 getNotes.forEach((note) => {
-  listBuilder(note.name, note.email);
+  listBuilder(note.name, note.email, note.message);
 });
 
-const deleteNote = (btn) => {
+
+
+// delete the note
+const deleteNote = (btn, note) => {
   let el = btn.parentNode;
   const index = [...el.parentElement.children].indexOf(el);
   notesStorage.splice(index, 1);
   localStorage.setItem("notes", JSON.stringify(notesStorage));
   el.remove();
+  if(!note){hiMessage.innerHTML = "Hi, dear admin. You haven't received any new messages." }
 };
+
+
