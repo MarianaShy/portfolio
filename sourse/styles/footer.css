@@ -34,12 +34,19 @@ footer{
  }
 
  @keyframes runningLine {
-	from {
+	0% {
 	  transform: translateX(0);
 	}
-	
-	to {
-	  transform: translateX(-100%);
+	33%{
+		transform: translateX(-10%);
+
+	}
+	66%{
+		transform: translateX(10%);
+
+	}
+	100% {
+	  transform: translateX(0%);
 	}
  }
  

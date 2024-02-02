@@ -49,13 +49,42 @@ function openTab(tabname) {
 
 
 //--------------------contacts-----------
+const noteForm = document.getElementById("contact-form");
+const noteName = document.getElementById("contact-name");
+const noteEmail = document.getElementById("contact-email");
 
-if (typeof(Storage) !== "undefined") {
-	// Code for localStorage/sessionStorage.
- } else {
-	// Sorry! No Web Storage support..
- }
- localStorage.setItem("lastname", "Smith");
+const noteSubmit = document.getElementById("contact-submit");
+const notes = document.getElementById("information-output");
 
- // Retrieve
- document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+let notesStorage = localStorage.getItem("notes")
+  ? JSON.parse(localStorage.getItem("notes"))
+  : [];
+
+  noteForm.addEventListener("submit", (e) => {
+	e.preventDefault();
+	notesStorage.push({ name: noteName.value, email: noteEmail.value });
+ 
+	localStorage.setItem("notes", JSON.stringify(notesStorage));
+	listBuilder(noteName.value, noteEmail.value);
+	noteEmail.value = "";
+	noteName.value = "";
+ });
+
+const listBuilder = (name, email) => {
+  const note = document.createElement("li");
+  note.innerHTML = `<button onclick=deleteNote(this) class="btn" >Delete message</button> ${name} wrote from ${email} `;
+  notes.appendChild(note);
+};
+
+const getNotes = JSON.parse(localStorage.getItem("notes")) || [];
+getNotes.forEach((note) => {
+  listBuilder(note.name, note.email);
+});
+
+const deleteNote = (btn) => {
+  let el = btn.parentNode;
+  const index = [...el.parentElement.children].indexOf(el);
+  notesStorage.splice(index, 1);
+  localStorage.setItem("notes", JSON.stringify(notesStorage));
+  el.remove();
+};
