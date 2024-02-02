@@ -25,6 +25,8 @@
 }
 .tab-links{
 	position: relative;
+	z-index: -1;
+
 }
 .tab-links::after{
 	content: "";

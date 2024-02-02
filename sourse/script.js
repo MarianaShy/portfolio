@@ -80,7 +80,7 @@ let notesStorage = localStorage.getItem("notes")
  //Display the information from the reguest
 const listBuilder = (name, email, message) => {
   const note = document.createElement("li");
-  note.innerHTML = `<button onclick=deleteNote(this) class="btn" >Delete message</button> ${name} wrote: "${message}". Use this email address to reach out: <a href="meilto:${email}" class="">${email}</a> `;
+  note.innerHTML = `<div class="text-style-admin">${name} wrote: "${message}". Use this email address to reach out to ${name}: <a href="meilto:${email}" class="">${email}</a></div> <button onclick=deleteNote(this) class="btn" >Delete message</button>`;
   notes.appendChild(note);
   if(note){hiMessage.innerHTML = "Hi, dear admin. You have received some messages." }
   return note;
@@ -111,10 +111,11 @@ const deleteNote = (btn, note) => {
 function authorizeAdmin() {
 const adminDashboard = document.getElementById("admin-dashboard");
 const passwordInput = document.getElementById("password-input");
-const adminPassword = 21;
-	if(passwordInput.value) { 
-		alert("hi");
+const adminPassword = "21";
+	if(passwordInput.value === adminPassword) { 
+		console.log(adminDashboard);
 	}
-	else{alert("no")}
+	else{alert("Password is not correct. Please try again.")}
 }
+
 
