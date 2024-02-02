@@ -133,17 +133,17 @@ function hideDashboard (){
 
 
 function authorizeAdmin(password) {
-	
 	if(passwordInput.value === password) { 
+		console.log(3);
 		adminDashboard.classList.add("admin-visible");
 		logInForm.innerHTML = `<button class="btn" id="log-out" onclick="hideDashboard()">Log out</button>`;
-
 	}
 
 		
 	else {
 		alert("Password is not correct. Please try again.");
 	}
+
 }
 
 
