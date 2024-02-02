@@ -122,26 +122,36 @@ function fetchPassword(callback) {
  const logInButton = document.getElementById("log-in");
  const adminDashboard = document.getElementById("admin-dashboard");
  const passwordInput = document.getElementById("password-input");
+ const logInForm = document.getElementById("log-in-form");
+ const logOutForm = document.getElementById("log-out");
 
-
+function hideDashboard (){ 
+	adminDashboard.classList.add("admin-hidden");
+};
 
 
 function authorizeAdmin(password) {
 	
 	if(passwordInput.value === password) { 
-		adminDashboard.classList.add("admin-active");
-	}
-	else{
-		alert("Password is not correct. Please try again.");
+		adminDashboard.classList.add("admin-visible");
+		logInForm.innerHTML = `<button class="btn" id="log-out" onclick="hideDashboard()">Log out</button>`;
 		
+
+	}
+
+		
+	else {
+		alert("Password is not correct. Please try again.");
 	}
 }
+
 
 
 logInButton.addEventListener("click", function () {
 	fetchPassword(authorizeAdmin);
  });
 
+ 
 
 	
 

@@ -1,8 +1,8 @@
-.admin{
-	display: none;
+.admin-visible{
+	display: block;
 }
-.admin-active{
-	display: flex;
+.admin-hidden{
+	display: none;
 }
 .admin-flex{
 	display: flex;
