@@ -125,19 +125,20 @@ function fetchPassword(callback) {
  const logInForm = document.getElementById("log-in-form");
  const logOutForm = document.getElementById("log-out");
 
-function hideDashboard (){ 
+/*function hideDashboard (){ 
 	adminDashboard.classList.add("admin-hidden");
 	logInForm.innerHTML = `<input id="password-input" type="password" value="" class="form-field"  placeholder="Password">
 	<button class="btn" id="log-in">Log in</button>`;
-};
+};*/
 
 
 function authorizeAdmin(password) {
 	if(passwordInput.value === password) { 
 		console.log(3);
+		console.log(adminDashboard)
 		adminDashboard.classList.add("admin-visible");
-		logInForm.innerHTML = `<button class="btn" id="log-out" onclick="hideDashboard()">Log out</button>`;
-	}
+		/*logInForm.innerHTML = `<button class="btn" id="log-out" onclick="hideDashboard()">Log out</button>`;
+	*/}
 
 		
 	else {
