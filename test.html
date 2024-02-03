@@ -4,8 +4,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Portfolio</title>
+	<!--------------css--------------->
 	<link rel="stylesheet" href="./sourse/styles/style.css">
+	<!-----------favicon-------------->
 	<link rel="icon" href="/favicon.ico">
+	
+	<!-----------fontawesome----------->
 	<script src="https://kit.fontawesome.com/100aa7029b.js" crossorigin="anonymous"></script>
 
 </head>
@@ -59,7 +63,7 @@
 		
 		<!-----------main----------->
 		<section class="main" id="main">
-			<article id="home" class="content-container">
+			<article id="#home " class="content-container">
 				<div class="home__flex">
 					<div class="bio-col-1 home__titles">
 						<h1 class="home__title">Mariana Shydlovska</h1>
@@ -74,18 +78,15 @@
 			</article>
 		<!-----------work----------->
 
-			<section id="work" class="work">
-				<h2 class="subtitle">My work</h2>
+			<article id="my-work" class="work">
 				<div class="content-container work__flex">
-					
-				<div class="work__item">
-
+					<h2 class="subtitle">My work</h2>
+				<div class="work__item"></div>
 				</div>
-				</div>
-			</section>
+			</article>
 		<!-----------bio----------->
 		</section>
-			<section id="personal" >
+			<article id="personal" >
 				<div class="content-container">
 					<div class="bio__flex">
 						<div class="bio-col-1">
@@ -97,9 +98,9 @@
 							</p>
 							<div class="bio__sections">
 								<div class="tab-titles">
-									<p class="btn tab-links active-link" onclick="openTab(event, `skills`)">Skills</p>
-									<p class="btn tab-links" onclick="openTab(event, `experience`)">Experience</p>
-									<p class="btn tab-links" onclick="openTab(event, `education`)">Education</p>
+									<p class="btn tab-links active-link" onclick="openTab(`skills`)">Skills</p>
+									<p class="btn tab-links" onclick="openTab(`experience`)">Experience</p>
+									<p class="btn tab-links" onclick="openTab(`education`)">Education</p>
 								</div>
 								<div class="tab-content  active-tab" id="skills">
 									<ul>
@@ -108,14 +109,14 @@
 										<li>Github</li>
 									</ul>
 								</div>
-								<div class="tab-content" id="experience">
+								<div class="tab-content " id="experience">
 									<ul>
 										<li>Warehause Worker <span>May 2022 - Nov 2022</span></li>
 										<li>Self Employed Handmade artist <span>Sep 2017 - Jan 2022</span></li>
 										<li>Psychologist <span>Des 2013 - July 2017</span></li>
 									</ul>
 								</div>
-								<div class="tab-content" id="education">
+								<div class=" tab-content " id="education">
 									<ul>
 										<li>Swedish language and society <span>Nov 2022 - Dec 2023 Sweden</span></li>
 										<li>Web Development <span>Jan 2022 - May 2023 Sweden</span></li>
@@ -127,13 +128,13 @@
 
 					</div>
 				</div>
-			</section>
+			</article>
 
 
 
 			<!------------contacts------>
 
-			<section id="contacts">
+			<article id="contacts">
 				<div class="content-container">
 					<div class="contacts-flex">
 						<div class="left-column">
@@ -166,7 +167,7 @@
 
 					</div>
 				</div>
-			</section>
+			</article>
 
 
 
@@ -177,17 +178,17 @@
 
 			<!------------admin------>
 
-			<section id="admin" >
+			<article id="admin">
 				<div class="content-container"> 
-					<article>
+					<section>
 						<div class="log-in-form" id="log-in-form">
 							<input id="password-input" type="password" value="" class="form-field log-in-field"  placeholder="Enter Your password">
 							<button class="btn-log-in btn"  id="log-in">Log in</button>
 						</div>
 						
 						
-					</article>
-					<article id="admin-dashboard" style="display: none">
+					</section>
+					<section id="admin-dashboard" class="">
 						<div class="admin-flex">
 							<h2 class="subtitle">Admin dashboard</h2>
 						<p id="hi-message" class="text-style">Hi dear admin. You haven't received any new messages</p>
@@ -195,12 +196,12 @@
 					
 						</div>
 						
-					</article>
+					</section>
 				</div>
-			</section>
+			</article>
 		<!-----------footer----------->
 		<footer>
-			<section class="footer-flex ">
+			<div class="footer-flex ">
 				<p class="running__line">
 				This page was coded by
 				<a href="https://www.linkedin.com/in/mariana-shy">Mariana Shydlovska</a>
@@ -209,7 +210,7 @@
 				and hosted on <a href="https://lucent-belekoy-15a6a0.netlify.app/#contacts">Netlify</a>
 				</p>
 			
-			</section>
+			</div>
 		</footer>
 	</div>
 
