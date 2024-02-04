@@ -1,6 +1,6 @@
 'use strict'
 
-
+/*
 
 const pages = {
 		'home' : `Welcome to XYZ Company. This is our home page!<br/><br/><img src='lion.jpg' style='width:500px;' />`,
@@ -21,7 +21,7 @@ const pages = {
 			case 'bio':
 				contentToReturn = pages.bio;
 				break;
-			case 'contacts':
+			case 'contacts':*/
 				contentToReturn = pages.contacts;
 				break;
         case 'admin':
