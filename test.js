@@ -3,19 +3,6 @@
 
 //navbar
 
-/*function toggleSideMenu() {
-		if(sideMenu.classList.contains('hidden')){
-				sideMenu.classList.remove('hidden')
-		}
-		else{
-			sideMenu.classList.add('hidden')
-			}
-	}
-	function closeSideMenu() {
-		if(!sideMenu.classList.contains('hidden')){
-				sideMenu.classList.add('hidden')
-		}
-	}*/
 
 //-------------header----------------
 	const sideMenu = document.getElementById("my-nav-menu");
@@ -34,7 +21,7 @@ const tabLinks = document.getElementsByClassName("tab-links");
 const tabContents = document.getElementsByClassName("tab-content");
 
 
-function openTab(tabname) {
+function openTab(event, tabName) {
 	for(tabLink of tabLinks) {
 		tabLink.classList.remove("active-link")
 
@@ -44,7 +31,7 @@ function openTab(tabname) {
 		
 	}
 	event.currentTarget.classList.add("active-link")
-	document.getElementById(tabname).classList.add("active-tab")
+	document.getElementById(tabName).classList.add("active-tab")
 }
 
 
@@ -80,7 +67,7 @@ let notesStorage = localStorage.getItem("notes")
  //Display the information from the reguest
 const listBuilder = (name, email, message) => {
   const note = document.createElement("li");
-  note.innerHTML = `<div class="text-style-admin">${name} wrote: "${message}". Use this email address to reach out to ${name}: <a href="meilto:${email}" class="">${email}</a></div> <button onclick=deleteNote(this) class="btn" >Delete message</button>`;
+  note.innerHTML = `<div class="text-style-admin">${name} wrote: "${message}". Use this email address to reach out to ${name}: <a href="mailto:${email}" class="">${email}</a></div> <button onclick=deleteNote(this) class="btn" >Delete message</button>`;
   notes.appendChild(note);
   if(note){hiMessage.innerHTML = "Hi, dear admin. You have received some messages." }
   return note;
@@ -125,28 +112,24 @@ function fetchPassword(callback) {
  const logInForm = document.getElementById("log-in-form");
  const logOutForm = document.getElementById("log-out");
 
-/*function hideDashboard (){ 
-	adminDashboard.classList.add("admin-hidden");
-	logInForm.innerHTML = `<input id="password-input" type="password" value="" class="form-field"  placeholder="Password">
+function hideDashboard (){ 
+	adminDashboard.style.display = 'none';
+		logInForm.innerHTML = `<input id="password-input" type="password" value="" class="form-field"  placeholder="Password">
 	<button class="btn" id="log-in">Log in</button>`;
-};*/
+};
 
 
 function authorizeAdmin(password) {
 	if(passwordInput.value === password) { 
-	
-		adminDashboard.classList.add("admin-visible");
-		/*logInForm.innerHTML = `<button class="btn" id="log-out" onclick="hideDashboard()">Log out</button>`;
-	*/}
-
+		adminDashboard.style.display = 'block';
+		logInForm.innerHTML = `<button class="btn" id="log-out" onclick="hideDashboard()">Log out</button>`;
+	}
 		
 	else {
 		alert("Password is not correct. Please try again.");
+		adminDashboard.style.display = 'none';
 	}
-
 }
-
-
 
 logInButton.addEventListener("click", function () {
 	fetchPassword(authorizeAdmin);
@@ -155,4 +138,3 @@ logInButton.addEventListener("click", function () {
  
 
 	
-
