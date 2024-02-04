@@ -21,7 +21,7 @@ const pages = {
 			case 'bio':
 				contentToReturn = pages.bio;
 				break;
-			case 'contacts':*/
+			case 'contacts':
 				contentToReturn = pages.contacts;
 				break;
         case 'admin':
@@ -33,3 +33,4 @@ const pages = {
 		}
 		document.getElementById('content').innerHTML = contentToReturn; 
 	}
+*/
