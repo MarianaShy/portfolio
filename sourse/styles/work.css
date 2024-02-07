@@ -4,6 +4,8 @@
 	width: 100%;
 	justify-content: space-between;
 	margin-top: 1rem;
+	position: relative;
+	z-index: -1;
 }
 .work-item img{
 	width: 100%;
@@ -14,7 +16,7 @@
 }
 .work-item{
 	transition-duration: 1s;
-	padding: 1rem;
+	padding: 0.5rem;
 
 }
 .work-item:hover{
@@ -35,13 +37,11 @@
 		justify-self: center;
 		transition-duration: 1s;
 	}
-	
 }
 @media (min-width: 933px) {
 	.work-item{
-		flex-basis: 30%;
+		flex-basis: 33%;
 		justify-self: center;
 		transition-duration: 1s;
 	}
-	
 }
