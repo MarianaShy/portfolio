@@ -26,7 +26,7 @@
 	padding-left: 1rem;
 }
 .admin-flex a:hover{
-	color: var(--background-pink);
+	color: var(--main-color);
 	
 }
 .log-in-form{
