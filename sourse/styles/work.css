@@ -17,10 +17,11 @@
 .work-item{
 	transition-duration: 1s;
 	padding: 0.5rem;
+	justify-self: center;
+
 
 }
 .work-item:hover{
-	justify-self: center;
 	transform: scale(0.97);
 
 }
@@ -34,14 +35,11 @@
 @media (min-width: 723px) {
 	.work-item{
 		flex-basis: 50%;
-		justify-self: center;
 		transition-duration: 1s;
 	}
 }
-@media (min-width: 933px) {
+@media (min-width: 1100px) {
 	.work-item{
 		flex-basis: 33%;
-		justify-self: center;
-		transition-duration: 1s;
 	}
 }
