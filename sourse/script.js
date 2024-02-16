@@ -33,9 +33,8 @@ function openTab(event, tabName) {
 	event.currentTarget.classList.add("active-link")
 	document.getElementById(tabName).classList.add("active-tab")
 }
+//------------------contact us
 
-
-//--------------------contacts-----------
 const noteForm = document.getElementById("contact-form");
 const noteName = document.getElementById("contact-name");
 const noteEmail = document.getElementById("contact-email");
@@ -48,33 +47,44 @@ const notes = document.getElementById("information-output");
 
 
 
-let notesStorage = localStorage.getItem("notes")
-? JSON.parse(localStorage.getItem("notes"))
-: [];
+let notesStorage =  [];
 
    noteForm.addEventListener("submit", (e) => {
 	e.preventDefault();
 	notesStorage.push({ name: noteName.value, email: noteEmail.value, message: noteMessage.value });
 
 	localStorage.setItem("notes", JSON.stringify(notesStorage));
-	listBuilder(noteName.value, noteEmail.value, noteMessage.value);
+	postData(noteName.value, noteEmail.value, noteMessage.value);
 	noteEmail.value = "";
 	noteName.value = "";
 	noteMessage.value = "";
  });
+function postData(name, mail, mess) {
+	fetch("https://jsonplaceholder.typicode.com/todos", {
+  method: "POST",
+  body: JSON.stringify({
+    name: name,
+    mail: mail,
+    message: mess
+  }),
+  headers: {
+    "Content-type": "application/json; charset=UTF-8"
+  }
+})
+  .then((response) => response.json())
+  .then((json) => listBuilder(json.name, json.mail, json.mess));
 
+}
 
- //Display the information from the reguest
 const listBuilder = (name, email, message) => {
-  const note = document.createElement("li");
-  note.innerHTML = `<div class="text-style-admin">${name} wrote: "${message}". Use this email address to reach out to ${name}: <a href="mailto:${email}" class="">${email}</a></div> <button onclick=deleteNote(this) class="btn" >Delete message</button>`;
-  notes.appendChild(note);
-  if(note){hiMessage.innerHTML = "Hi, dear admin. You have received some messages." }
-  return note;
-};
+	const note = document.createElement("li");
+	note.innerHTML = `<div class="text-style-admin">${name} wrote: "${message}". Use this email address to reach out to ${name}: <a href="mailto:${email}" class="">${email}</a></div> <button onclick=deleteNote(this) class="btn" >Delete message</button>`;
+	notes.appendChild(note);
+	if(note){hiMessage.innerHTML = "Hi, dear admin. You have received some messages." }
+	return note;
+ };
 
-
-//loop over all requests that have been sent
+ //loop over all requests that have been sent
 const getNotes = JSON.parse(localStorage.getItem("notes")) || [];
 getNotes.forEach((note) => {
   listBuilder(note.name, note.email, note.message);
