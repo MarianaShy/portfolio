@@ -1,7 +1,7 @@
 `use strict`
 
 
-//navbar
+//--------------navbar---------------
 
 
 //-------------header----------------
@@ -12,7 +12,7 @@
 
 burger.addEventListener("click", ()=>{(sideMenu.classList.contains('hidden')) ? sideMenu.classList.remove('hidden'):  sideMenu.classList.add('hidden')});
 main.addEventListener("click", ()=>{ if (!sideMenu.classList.contains('hidden')) {sideMenu.classList.add('hidden')}});
-	
+sideMenu.addEventListener("click", ()=>sideMenu.classList.add('hidden'));
 
 
 //--------------bio-------------

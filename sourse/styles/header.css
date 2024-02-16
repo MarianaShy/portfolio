@@ -9,14 +9,14 @@
 	width: 100%;
 	height: 5rem;
 	align-items: center;
-	z-index: 5;
+	z-index: 10;
 }
 .nav-menu{
 	width: 100%;
 	position: fixed;
 	top:5rem;
 	transition: top 0.5s;
-	z-index: 10;
+	z-index: 5;
 }
 .nav-list{
 	display: flex;
