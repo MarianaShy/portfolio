@@ -23,7 +23,11 @@
 	justify-content: space-evenly;
 	flex-wrap: wrap;
 }
+.tab-links{
+	position: relative;
+	
 
+}
 .tab-links::after{
 	content: "";
 	width: 0;
