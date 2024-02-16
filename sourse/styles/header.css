@@ -16,6 +16,7 @@
 	position: fixed;
 	top:5rem;
 	transition: top 0.5s;
+	z-index: 10;
 }
 .nav-list{
 	display: flex;
