@@ -148,4 +148,33 @@ logInButton.addEventListener("click", function () {
  
 
 	
+//-----------------gitHub API-----------
 
+const accessToken = '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';
+const username = 'marianashy';
+
+fetch(`https://api.github.com/users/${username}`, {
+  headers: {
+    Authorization: `token ${accessToken}`
+  }
+})
+.then(response => {
+  if (!response.ok) {
+    throw new Error('Network response was not ok');
+  }
+  return response.json();
+})
+.then(user => {
+  displayFromGitHub(user);
+})
+.catch(error => {
+  console.error('There was a problem with the fetch operation:', error);
+});
+function displayFromGitHub(infoFromApi){
+	const email = document.getElementById('git-sours-email')
+	const emailLink = document.getElementsByClassName('git-sours-email-link')
+	emailLink.href = "mailto:" + infoFromApi.email;
+	
+	email.innerHTML = infoFromApi.email;
+	console.log(infoFromApi.email)
+}
