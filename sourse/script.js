@@ -149,13 +149,13 @@ logInButton.addEventListener("click", function () {
 
 	
 //-----------------gitHub API-----------
-
+/*
 const accessToken = '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';
 const username = 'marianashy';
 
 fetch(`https://api.github.com/users/${username}`, {
   headers: {
-    Authorization: `token ${accessToken}`
+    Authorization: `Bearer  ${accessToken}`
   }
 })
 .then(response => {
@@ -173,8 +173,8 @@ fetch(`https://api.github.com/users/${username}`, {
 function displayFromGitHub(infoFromApi){
 	const email = document.getElementById('git-sours-email')
 	const emailLink = document.getElementsByClassName('git-sours-email-link')
-	emailLink.href = "mailto:" + infoFromApi.email;
+	emailLink.href = "mailto:" + infoFromApi.login;
 	
-	email.innerHTML = infoFromApi.email;
-	console.log(infoFromApi.email)
-}
+	email.innerHTML = infoFromApi.login;
+	console.log(infoFromApi.login)
+}*/
