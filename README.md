@@ -1,5 +1,5 @@
 # portfolio 
-https://lucent-belekoy-15a6a0.netlify.app/#admin
+https://lucent-belekoy-15a6a0.netlify.app
 
 Get email address from GitHub API
 
