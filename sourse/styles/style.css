@@ -8,10 +8,7 @@
 @import url(./work.css);
 
 
-img{
-	box-shadow: 5px 5px 20px var(--main-color);
 
-}
 :root{
 	--main-color: rgb(113, 113, 113);
 	--main-dark-color: rgb(34, 34, 34);
