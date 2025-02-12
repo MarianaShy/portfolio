@@ -40,6 +40,13 @@ margin: 0 auto;
 	top: 25px;
 	z-index: -1;
 }
+.home-col-1 img {
+	width: 100%;
+	border-radius: 2rem;
+ }
+ .home-col-1 .home-col-2  {
+	width: 100%;
+ }
 
 @media (min-width: 400px) {
 	.home__title{
@@ -69,6 +76,13 @@ margin: 0 auto;
 	#main-img{      
 		content:url("/sourse/img/422749736_352870154183603_141032903342476910_n2.jpg");
 	} 
+	.home-col-1 {
+		flex-basis: 35%;
+	 }
+  
+	 .home-col-2 {
+		flex-basis: 45%;
+	 }
 }
 
 @media (min-width: 933px) {

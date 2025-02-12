@@ -1,3 +1,6 @@
+#work .subtitle{
+	padding: 1rem;
+}
 .work-flex{
 	display: flex;
 	flex-wrap: wrap;
